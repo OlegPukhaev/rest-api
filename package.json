@@ -1,0 +1,22 @@
+{
+  "name": "rest-api",
+  "version": "1.0.0",
+  "description": "Rest api",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [
+    "rest",
+    "api"
+  ],
+  "author": "Oleg Pukhaev",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
