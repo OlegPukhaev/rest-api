@@ -9,7 +9,8 @@ connectDB();
 //Init Middleware
 app.use(express.json({ extended: false }));
 
-// Mongoose test
+app.use('/api/users', require('./routes/api/users'));
+app.use('/api/auth', require('./routes/api/auth'));
 
 app.use(express.static(path.resolve(__dirname, 'client', 'build')));
 
