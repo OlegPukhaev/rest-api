@@ -1,18 +1,13 @@
 const express = require('express');
+const connectDB = require('./config/db');
 const path = require('path');
 const app = express();
 
-//mongoose test
-const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/test', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+// c
+connectDB();
 
-const Cat = mongoose.model('Cat', { name: String });
-
-const kitty = new Cat({ name: 'Zildjian' });
-kitty.save().then(() => console.log('meow'));
+//Init Middleware
+app.use(express.json({ extended: false }));
 
 // Mongoose test
 
